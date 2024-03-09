@@ -166,11 +166,11 @@ export const TodoListUsers = () =>{
 
     return(
         <div className="container">
-            <h1 className="text-center m-2 mt-5">ToDo List</h1>
+            <h1 className="text-center m-2 mt-4 mb-5">ToDo List</h1>
             {login == false ?
             <div>
             <div className="m-3 justify-content-center">
-            <div className="container col-6 card">
+            <div className="container col-6 card border border-4">
             <form onSubmit={handleOnSubmit}>
             <input type="text" className="form-control mt-3 mb-2" value={user} onChange={(e) => setUser(e.target.value)} placeholder="Introduce tu nombre"></input>
             <div className="form-check text-start">
@@ -208,14 +208,14 @@ export const TodoListUsers = () =>{
             </div>
             <div className="container col-6">
             <div className="mb-3 justify-content-center">
-                <form onSubmit={addTask}>
-                    <input className="form-control" placeholder="What do you need to do?" type="tet" value={task} onChange={(e) =>{setTask(e.target.value);}}/>
+                <form onSubmit={addTask} >
+                    <input className="form-control border border-4" placeholder="Agrega una tarea" type="tet" value={task} onChange={(e) =>{setTask(e.target.value);}}/>
                 </form>
             </div>
             <div className="list justify-content-center">
-                <ul className="list-group"> 
+                <ul className="list-group "> 
                     {list.map((item, index) => {
-                        return <li key={index} className="list-group-item d-flex justify-content-between hidden-icon">
+                        return <li key={index} className="list-group-item d-flex justify-content-between hidden-icon border border-bottom-0 border-4">
                             {item.label}: {item.done ? 'Terminado' : 'Pendiente'}
                             <div className="justify-content-end">
                             <span onClick={() => {taskDone(item)}} className={item.done ? "disabled" : " "} aria-disabled={item.done ? "true" : "false"}><i className={item.done ? "disabled" : "fas fa-solid fa-check m-1 text-success"}></i></span>
@@ -223,8 +223,8 @@ export const TodoListUsers = () =>{
                             </div>
                         </li>
                     })}
-                    <span className="list-group-item bg-light text-end fw-lighter">
-                        {list.length === 0 ? "No tasks, add one please" : list.length + " tareas."}
+                    <span className="list-group-item bg-light text-end fw-lighter border-4 border">
+                        {list.length === 0 ? "No hay tareas." : list.length + " tareas."}
                     </span>
                 </ul>
             </div>

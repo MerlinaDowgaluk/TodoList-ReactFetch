@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TodoListUsers } from "./TodoList-Users.jsx";
+import { TodoListUsers } from "../js/component/TodoList-Users.jsx";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,7 @@ const Home = () => {
         if (response.ok){
             const data = await response.json();
             console.log(data);
-			navigate('/todo-list')
+			
         } else {
             return ('Error: ', response.status, response.statusText)
         }

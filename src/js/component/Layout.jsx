@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import injectContext from "./store/appContext.js";
 import { TodoListUsers } from "./TodoList-Users.jsx";
-import Home from "./home.jsx";
+import Home from "../../img/home.jsx";
 
 
 export const Layout = () =>{
@@ -17,7 +17,7 @@ export const Layout = () =>{
                 <BrowserRouter basename={basename}>
                     <Routes>
                         <Route element={<TodoListUsers />} path="/" />   
-                        <Route element={<h1>Not found!</h1>} path="*"/>
+                        <Route element={<h1 className="text-center m-4">Not found!</h1>} path="*"/>
                     </Routes>
                 </BrowserRouter>
             </div>

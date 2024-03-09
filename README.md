@@ -1,4 +1,4 @@
-# ToDo List with React.js and Flask
+# ToDo List with React.js and Fetch
 
 I created a Todo List application using React.js for the frontend and Flask for the backend. Users can register, add tasks, mark them as complete, and delete as needed. The project highlights my proficiency in full-stack development, offering an efficient and responsive solution for managing to-do lists.
 
